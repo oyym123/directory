@@ -5,7 +5,7 @@
  * Date: 2020/6/1
  * Time: 23:38
  */
-const DIR_ARR = ['template1', 'template2', 'template3', 'template4'];  //所有主目录
+require './config.php';
 
 function jump($template)
 {

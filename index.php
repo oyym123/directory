@@ -7,7 +7,7 @@
  */
 
 require 'common.php';
-
+createDirectory();
 if (isset($_GET['a']) && $_GET['a'] == 'content') {
     catchContent('template1');
 }
