@@ -38,17 +38,17 @@ function rewrite($content, $template)
 }
 
 //目录繁殖
-function createDirectory()
+function createDirectory($num = 10)
 {
     //原理是将 模板 不断的复制 生成的大批量的二级目录
     $templateStr = "['";
 
-    for ($i = 1; $i < 10; $i++) {
+    for ($i = 1; $i <= $num; $i++) {
         $templateStr .= 'template' . $i . "','";
     }
 
     $templateStr = substr($templateStr, 0, -2) . ']';
-    for ($i = 1; $i < 10; $i++) {
+    for ($i = 1; $i <= $num; $i++) {
         copyDir('./template', './template' . $i);
         file_put_contents('./template' . $i . '/cms.php', "<?php
 echo '<h1>模板" . $i . "号</h1>';");

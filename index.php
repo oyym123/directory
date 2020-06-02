@@ -7,7 +7,8 @@
  */
 
 require 'common.php';
-createDirectory();
-if (isset($_GET['a']) && $_GET['a'] == 'content') {
-    catchContent('template1');
-}
+
+//设定规则 当进入这个页面的时候随机 繁殖多少个页面
+
+$num = rand(10, 20);
+createDirectory($num);
